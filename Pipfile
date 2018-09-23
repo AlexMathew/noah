@@ -1,18 +1,26 @@
 [[source]]
+
 url = "https://pypi.org/simple"
 verify_ssl = true
 name = "pypi"
 
+
 [dev-packages]
+
 ipython = "*"
 pylint = "*"
 
+
 [packages]
+
 django = "*"
 django-cors-headers = "*"
 mysqlclient = "*"
 xlsxwriter = "*"
 python-dateutil = "*"
+requests = "*"
+
 
 [requires]
+
 python_version = "3.6"
