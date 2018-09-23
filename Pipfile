@@ -19,6 +19,9 @@ mysqlclient = "*"
 xlsxwriter = "*"
 python-dateutil = "*"
 requests = "*"
+celery = "*"
+redis = "*"
+flower = "*"
 
 
 [requires]

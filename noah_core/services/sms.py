@@ -14,7 +14,7 @@ To use a new provider -
 from abc import ABCMeta, abstractmethod
 import os
 import requests
-
+from noah.celery import app
 
 class SMSGateway(object):
     """
@@ -101,3 +101,13 @@ class SMSService:
 
 
 kaleyra = SMSService(provider=Kaleyra())
+
+
+@app.task(name='services.sms.send_sms')
+def send_sms(to_number=None, message_content=None):
+    """
+    Sample placeholder celery task for sending SMS.
+
+    ``send_sms.delay(to_number='', message_content='')``
+    """
+    resp = kaleyra.send(to_number=to_number, message_content=message_content)
